@@ -26,5 +26,7 @@ firstTextRecord = texts[0]
 #Define last record of calls
 lastCallRecord = calls[len(calls)-1]
 
+
+
 print("First record of texts, {} texts {} at time {}.".format(firstTextRecord[0], firstTextRecord[1], firstTextRecord[2]))
 print("Last record of calls, {} texts {} at time {}.".format(lastCallRecord[0], lastCallRecord[1], lastCallRecord[2], lastCallRecord[3]))
