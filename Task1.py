@@ -22,19 +22,21 @@ Print a message:
 
 #Task 1 - The script correctly prints number of distinct telephone numbers in the dataset.
 
-#Append numbers in a new list. Then remove duplicates
+#Append numbers in list. Then remove duplicates
 
 numbers = []
 
-for text in texts:
-    numbers.append(text[0])
-    numbers.append(text[1])
+for i in range(2):
 
-for call in calls:
-    numbers.append(call[0])
-    numbers.append(call[1])
 
-#Remove any duplicates
+    for text in texts:
+        numbers.append(text[i])
+
+    for call in calls:
+        numbers.append(call[i])
+
+
+#Remove any duplicates using dictionary definition
 numbers = list(dict.fromkeys(numbers))
 print("There are {} different telephone numbers in the records.".format(len(numbers)))
 

@@ -21,7 +21,7 @@ have the form (080)xxxxxxx.)
 Part A: Find all of the area codes and mobile prefixes called by people
 in Bangalore.
  - Fixed lines start with an area code enclosed in brackets. The area
-   codes vary in length but always begin with 0.
+   codes vary in length but always begin with 0. ^^
  - Mobile numbers have no parentheses, but have a space in the middle
    of the number to help readability. The prefix of a mobile number
    is its first four digits, and they always start with 7, 8 or 9.
@@ -43,3 +43,25 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+
+#Part A
+
+numbers = []
+
+for call in calls:
+
+  first = call[0].index('(')
+  second = call[0].index(')')
+
+  if call[0].index(' ')!= -1:
+    numbers.append(call[0][0:4])
+
+  if call[1].index(' ')!= -1:
+    numbers.append(call[1][0:4])
+
+  if(call[0][0:3] == '140')
+
+  numbers.append()
+  numbers.append(call[1])
+

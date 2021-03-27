@@ -24,26 +24,26 @@ Print a message:
 September 2016.".
 """
 
-#Dictionary of phone numbers + add seconds
-
-#Create a dictionary of distinct phone numbers
+#Dictionary of phone numbers + add seconds. Create a dictionary of distinct phone numbers
 
 numbers = []
+numberDict = {}
+
+for i in range(2):
+
+    for call in calls:
+        numbers.append(call[i])
+
+    #Distinct Phone numbers in dictionary
+    numberDict = (dict.fromkeys(numbers, 0))
+
+    #Aggregating call time for each caller
+    for call in calls:
+        numberDict[call[i]] = numberDict.get(call[i]) + int(call[3])
 
 
-for call in calls:
-    numbers.append(call[0])
-    numbers.append(call[1])
-
-numbers = (dict.fromkeys(numbers,0))
-
-for call in calls:
-    numbers[call[0]] = numbers.get(call[0]) + int(call[3])
-    numbers[call[1]] = numbers.get(call[1]) + int(call[3])
-
-
-phonesLongest = max(numbers, key=numbers.get)
-longestCall = max(numbers.values())
+phonesLongest = max(numberDict, key=numberDict.get)
+longestCall = max(numberDict.values())
 
 print("{} spent the longest time, {}  seconds, on the phone during September 2016.".format(phonesLongest, longestCall))
 
