@@ -47,21 +47,30 @@ The percentage should have 2 decimal digits
 
 #Part A
 
-numbers = []
+numbers = [] 
 
-for call in calls:
+print("The numbers called by people in Bangalore haves codes: \n")
 
-  first = call[0].index('(')
-  second = call[0].index(')')
+for i in range(2):
 
-  if call[0].index(' ')!= -1:
-    numbers.append(call[0][0:4])
+  for call in calls:
 
-  if call[1].index(' ')!= -1:
-    numbers.append(call[1][0:4])
+    if call[i].find('(')!= -1:
+      firstIndex = call[i].index('(')
+      secondIndex = call[i].index(')')
+      numbers.append(call[i][firstIndex:secondIndex+1])
 
-  if(call[0][0:3] == '140')
+    elif call[i].find(' ')!= -1:
+      numbers.append(call[i][0:4])
 
-  numbers.append()
-  numbers.append(call[1])
+
+    elif call[i][0:3] == '140':
+      numbers.append(call[i][0:3])
+
+
+numbers = set(numbers)
+
+for number in numbers:
+  print(number)
+
 
