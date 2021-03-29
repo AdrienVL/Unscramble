@@ -30,12 +30,3 @@ lastCallRecord = calls[len(calls)-1]
 
 print("First record of texts, {} texts {} at time {}.".format(firstTextRecord[0], firstTextRecord[1], firstTextRecord[2]))
 print("Last record of calls, {} texts {} at time {}.".format(lastCallRecord[0], lastCallRecord[1], lastCallRecord[2], lastCallRecord[3]))
-
-"""
-Time Complexity
-
-Time Complexity is constant: O(1)
-Doesn't matter how big the input is.
-
-
-"""

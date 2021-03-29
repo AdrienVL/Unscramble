@@ -43,16 +43,6 @@ def count(calls,texts):
 numbers = set(count(calls,texts))
 print("There are {} different telephone numbers in the records.".format(len(numbers)))
 
-"""
-Time Complexity
 
-Linear:
-
-2 for loops running twice: O(4n)
-
-Result:
-O(4n) -> O(n)
-
-"""
 
 

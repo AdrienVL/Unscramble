@@ -100,28 +100,3 @@ print("PART B \n{} percent of calls from fixed lines in Bangalore are calls to o
 
 
 
-"""
-Time Complexity
-
-PART A
-
-Logarithmic:
-
-1 for loops running twice: O(2n)
-1 for loop for printing: O(n)
-Sort functin: O(n log n)
-
-
-Result:
-O(3n) + O(nlog n) -> O(nlogn)
-
-PART B
-
-Linear: 
-
-1 for loops running twice: O(2n)
-
-Result:
-O(2n) -> O(n)
-
-"""

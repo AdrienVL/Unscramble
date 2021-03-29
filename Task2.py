@@ -43,19 +43,3 @@ longestCall = max(numberDict.values())
 
 print("{} spent the longest time, {}  seconds, on the phone during September 2016.".format(phonesLongest, longestCall))
 
-"""
-Time Complexity
-
-Linear:
-
-
-2 for loops running twice: O(4n)
-.get(key): O(n)
-max function: O(n)
-
-
-Result:
-O(6n) -> O(n)
-
-
-"""

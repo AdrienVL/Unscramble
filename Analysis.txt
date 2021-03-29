@@ -1,0 +1,63 @@
+Time Complexity
+
+Task 0
+
+    Time Complexity is constant: O(1)
+
+
+Task 1
+
+    Time complexity is Linear.
+
+    2 for loops running twice: O(4n)
+
+    Result:
+    O(4n) -> O(n)
+
+Task 2
+
+    Time complexity is Linear.
+
+
+    2 for loops running twice: O(4n)
+    .get(key): O(n)
+    max function: O(n)
+
+
+    Result:
+    O(6n) -> O(n)
+
+Task 3
+
+    PART A
+
+        Logarithmic:
+
+        1 for loops running twice: O(2n)
+        1 for loop for printing: O(n)
+        Sort functin: O(n log n)
+
+
+        Result:
+        O(3n) + O(nlog n) -> O(nlogn)
+
+    PART B
+
+        Linear: 
+
+        1 for loops running twice: O(2n)
+
+        Result:
+        O(2n) -> O(n)
+
+Task 4
+
+        Quadratic:
+
+
+        2 inner for loops: O(2n^2)
+        sorting: O(n log(n))
+        1 for loop to print: O(n)
+
+        Result:
+        2n^2 + nlog(n) + n -> n^2 + nlog(n) + n -> n^2
