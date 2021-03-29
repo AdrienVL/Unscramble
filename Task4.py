@@ -77,6 +77,6 @@ sorting: O(n log(n))
 1 for loop to print: O(n)
 
 Result:
-2n^2 + nlog(n) + n -> n^2 + nlog(n) + n
+2n^2 + nlog(n) + n -> n^2 + nlog(n) + n -> n^2
 
 """

@@ -70,7 +70,7 @@ for i in range(2):
 #Remove Duplicates and sorting
 numbers = sorted(set(numbers))
 
-print("The numbers called by people in Bangalore haves codes: \n")
+print("PART A \nThe numbers called by people in Bangalore haves codes:")
 
 #Print ordered numbers
 for number in numbers:
@@ -96,7 +96,7 @@ for i in range(2):
   percentage = round(float(countLineToLine/countFixedLines),2) * 100
 
 
-print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
+print("PART B \n{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
 
 
 
@@ -113,7 +113,7 @@ Sort functin: O(n log n)
 
 
 Result:
-O(3n) + O(n log n) -> O(n + (n log n))
+O(3n) + O(nlog n) -> O(nlogn)
 
 PART B
 
