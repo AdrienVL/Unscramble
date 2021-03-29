@@ -11,10 +11,6 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
-# with open('testingCalls.csv', 'r') as f:
-#     reader = csv.reader(f)
-#     testingCalls = list(reader)
-
 """
 TASK 2: Which telephone number spent the longest time on the phone
 during the period? Don't forget that time spent answering a call is
@@ -24,7 +20,7 @@ Print a message:
 September 2016.".
 """
 
-#Dictionary of distinct phone numbers (keys) and call duration (Values). 
+#Dictionary of distinct phone numbers (keys) and call duration (values). 
 
 numbers = []
 numberDict = {}
@@ -47,3 +43,19 @@ longestCall = max(numberDict.values())
 
 print("{} spent the longest time, {}  seconds, on the phone during September 2016.".format(phonesLongest, longestCall))
 
+"""
+Time Complexity
+
+Linear:
+
+
+2 for loops running twice: O(4n)
+.get(key): O(n)
+max function: O(n)
+
+
+Result:
+O(6n) -> O(n)
+
+
+"""

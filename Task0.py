@@ -34,7 +34,8 @@ print("Last record of calls, {} texts {} at time {}.".format(lastCallRecord[0], 
 """
 Time Complexity
 
-Time Complexity is constant. Doesn't matter how big the input is.
+Time Complexity is constant: O(1)
+Doesn't matter how big the input is.
 
 
 """

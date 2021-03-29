@@ -48,7 +48,10 @@ Time Complexity
 
 Linear:
 
-4n -> n
+2 for loops running twice: O(4n)
+
+Result:
+O(4n) -> O(n)
 
 """
 

@@ -49,27 +49,30 @@ The percentage should have 2 decimal digits
 
 numbers = [] 
 
-print("The numbers called by people in Bangalore haves codes: \n")
-
 for i in range(2):
 
   for call in calls:
 
+    #Storing Fixed Lines
     if call[i].find('(')!= -1:
       firstIndex = call[i].index('(')
       secondIndex = call[i].index(')')
       numbers.append(call[i][firstIndex:secondIndex+1])
 
+    #Storing Mobile Numbers
     elif call[i].find(' ')!= -1:
       numbers.append(call[i][0:4])
 
-
+    #Storing Telemarketer
     elif call[i][0:3] == '140':
       numbers.append(call[i][0:3])
 
-
+#Remove Duplicates and sorting
 numbers = sorted(set(numbers))
 
+print("The numbers called by people in Bangalore haves codes: \n")
+
+#Print ordered numbers
 for number in numbers:
   print(number)
 
@@ -81,10 +84,12 @@ countLineToLine = 0
 for i in range(2):
 
   for call in calls:
+
+    #Count number of fixed lines
     if call[i].find('(080)')!= -1:
       countFixedLines += 1
 
-    
+    #Count calls from fixed to fixed lines
     if call[0].find('(080)') != -1 and call[0].find('(080)') == call[1].find('(080)'):
       countLineToLine += 1
 
@@ -93,7 +98,30 @@ for i in range(2):
 
 print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
 
-"""
-In Tasks 3 and 4, you can use in-built methods sorted() or list.sort() for sorting which are the implementation of Timsort and Samplesort, respectively. Both these sorting methods have a worst-case time-complexity of O(n log n). Check the below links to learn more about these methods:
-"""
 
+
+"""
+Time Complexity
+
+PART A
+
+Logarithmic:
+
+1 for loops running twice: O(2n)
+1 for loop for printing: O(n)
+Sort functin: O(n log n)
+
+
+Result:
+O(3n) + O(n log n) -> O(n + (n log n))
+
+PART B
+
+Linear: 
+
+1 for loops running twice: O(2n)
+
+Result:
+O(2n) -> O(n)
+
+"""

@@ -25,42 +25,58 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
-#Telemarketers' numbers have no parentheses or space, but start with the code 140. Example: "1402316533"
-
 numbers = []
 telemarketers = []
 
-
+#Create a list of callers
 for call in calls:
-    print(call[0])
-    if call[0][0:3] == '140':
-        numbers.append(call[0])
+    numbers.append(call[0])
 
 
 #Remove duplicate numbers
 numbers = set(numbers)
+
+#Create a numbers list duplicate
 telemarketers = list(numbers)
 
+#Remove numbers that are not telemarketers from telemarketers list
 for number in numbers:
+    #Iterate through calls
     for call in calls:
         if number == call[1]:
             telemarketers.remove(number)
             break
 
+#Update numbers list w/ telemarketers list
 numbers = telemarketers
 
 for number in numbers:
+    #Iterate through texts
     for text in texts:
         if number == text[0] or number == text[1]:
             telemarketers.remove(number)
             break
 
-
-
-print("These numbers could be telemarketers: \n")
-
+#Sort telemarketers
 telemarketers = sorted(telemarketers)
+
+print("These numbers could be telemarketers:")
 
 for telemarketer in telemarketers:
     print(telemarketer)
 
+"""
+
+Time Complexity
+
+Quadratic:
+
+
+2 inner for loops: O(2n^2)
+sorting: O(n log(n))
+1 for loop to print: O(n)
+
+Result:
+2n^2 + nlog(n) + n -> n^2 + nlog(n) + n
+
+"""
