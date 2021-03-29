@@ -75,20 +75,25 @@ for number in numbers:
 
 #Part B
 
-# countFixedLines = 0
-# countLineToLine = 0
+countFixedLines = 0
+countLineToLine = 0
 
-# for i in range(2):
+for i in range(2):
 
-#   for call in calls:
-#     if call[i].find('(080)')!= -1:
-#       countFixedLines += 1
+  for call in calls:
+    if call[i].find('(080)')!= -1:
+      countFixedLines += 1
 
     
-#     if call[0].find('(080)') != -1 and call[0].find('(080)') == call[1].find('(080)'):
-#       countLineToLine += 1
+    if call[0].find('(080)') != -1 and call[0].find('(080)') == call[1].find('(080)'):
+      countLineToLine += 1
 
-#   percentage = round(float(countLineToLine/countFixedLines),2) * 100
+  percentage = round(float(countLineToLine/countFixedLines),2) * 100
 
 
-# print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
+print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
+
+"""
+In Tasks 3 and 4, you can use in-built methods sorted() or list.sort() for sorting which are the implementation of Timsort and Samplesort, respectively. Both these sorting methods have a worst-case time-complexity of O(n log n). Check the below links to learn more about these methods:
+"""
+

@@ -25,12 +25,16 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
+#Telemarketers' numbers have no parentheses or space, but start with the code 140. Example: "1402316533"
+
 numbers = []
 telemarketers = []
 
 
 for call in calls:
-    numbers.append(call[0])
+    print(call[0])
+    if call[0][0:3] == '140':
+        numbers.append(call[0])
 
 
 #Remove duplicate numbers

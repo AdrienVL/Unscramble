@@ -24,7 +24,7 @@ Print a message:
 September 2016.".
 """
 
-#Dictionary of phone numbers + add seconds. Create a dictionary of distinct phone numbers
+#Dictionary of distinct phone numbers (keys) and call duration (Values). 
 
 numbers = []
 numberDict = {}
