@@ -70,7 +70,25 @@ for i in range(2):
 
 numbers = set(numbers)
 
-for number in numbers:
-  print(number)
+# for number in numbers:
+  # print(number)
+
+#Part B
+
+countFixedLines = 0
+countLineToLine = 0
+
+for i in range(2):
+
+  for call in calls:
+    if call[i].find('(080)')!= -1:
+      countFixedLines += 1
+
+    
+    if call[0].find('(080)') != -1 and call[0].find('(080)') == call[1].find('(080)'):
+      countLineToLine += 1
+
+  percentage = round(float(countLineToLine/countFixedLines),2) * 100
 
 
+print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
